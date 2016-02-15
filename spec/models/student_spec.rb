@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'shoulda-matchers'
 RSpec.describe Student, type: :model do
   it { should belong_to :user }
   it { should validate_presence_of :first_name }

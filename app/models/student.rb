@@ -1,9 +1,9 @@
 class Student < ActiveRecord::Base
-  belongs_to :user
-  validates_presence_of :first_name
-  validates_presence_of :last_name
-  validates_presence_of :grade
-  validates_presence_of :gpa
-  validates_presence_of :detentions
-  validates_presence_of :gender
+  belongs_to :user, foreign_key: :teacher_id
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :grade, presence: true
+  validates :gpa, presence: true
+  validates :detentions, presence: true
+  validates :gender, presence: true
 end
