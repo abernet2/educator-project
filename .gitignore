@@ -39,6 +39,8 @@
 *.log
 *.sql
 *.sqlite
+database.yml
+schema.rb
 
 # OS generated files #
 ######################
