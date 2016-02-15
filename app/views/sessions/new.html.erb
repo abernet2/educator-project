@@ -1,0 +1,13 @@
+<div class="login-container">
+  <%= form_tag(sessions_path, method: 'post') do %>
+    <div class="login-username">
+      <%= label_tag :username, "Username:" %>
+      <%= text_field_tag :username %>
+    </div>
+    <div class="login-password">
+      <%= label_tag :password, "Password" %>
+      <%= password_field_tag :password %>
+    </div>
+    <input type='submit' class='btn' value='Login'>
+  <% end %>
+</div>
