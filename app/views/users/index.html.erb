@@ -1,7 +1,8 @@
-<% @users.each do |user| %>
-	<img src="<%= user.photo_url %>">
-	<%= link_to(user) do %>
-	  <strong><%= user.first_name %> <%= user.last_name %></strong>
+<dl class = "dl-horizontal">
+	<% @users.each do |user| %>
+		<dt><%= link_to(user) do %><img src="<%= user.photo_url %>" width="50"><% end %></dt>
+		<%= link_to(user) do %>
+		  <dd><strong><%= user.first_name %> <%= user.last_name %></strong></dd>
+		<% end %>
 	<% end %>
-<% end %>
-
+</dl>
