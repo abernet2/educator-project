@@ -4,7 +4,8 @@
       <%= f.text_field :username %>
     </div>
     <div class="login-password">
-      <%= f.password_field
+      <%= f.password_field :user, :password %>
     </div>
+    <%= f.submit %>
   <% end %>
 </div>
