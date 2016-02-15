@@ -1,0 +1,42 @@
+<table class="table-striped">
+  <tr>
+    <th>
+      First Name
+    </th>
+    <th>
+      Last Name
+    </th>
+    <th>
+      Grade
+    </th>
+    <th>
+      GPA
+    </th>
+    <th>
+      Detentions
+    </th>
+    <th>
+      Gender
+    </th>
+  </tr>
+  <% @students.each do |student| %>
+  <tr>
+    <%= student.first_name %>
+  </tr>
+  <tr>
+    <%= student.last_name %>
+  </tr>
+  <tr>
+    <%= student.grade %>
+  </tr>
+  <tr>
+    <%= student.gpa %>
+  </tr>
+  <tr>
+    <%= student.detentions %>
+  </tr>
+  <tr>
+    <%= student.gender %>
+  </tr>
+  <% end %>
+</table>
