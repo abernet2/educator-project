@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Students",   '#' %></li>
               <li><%= link_to "Teachers",   '#' %></li>
-              <% if nil || current_user %>
+              <% if current_user %>
               <li><%= link_to "Log in", '#' %></li>
               <% else %>
               <li><%= link_to "Your Account", '#' %></li>
