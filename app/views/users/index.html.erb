@@ -1,5 +1,7 @@
 <% @users.each do |user| %>
 	<img src="<%= user.photo_url %>">
-	<%= user.first_name  %> <%= user.last_name %>
+	<%= link_to(user) do %>
+	  <strong><%= user.first_name %> <%= user.last_name %></strong>
+	<% end %>
 <% end %>
 
