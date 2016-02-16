@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :require_loggout, only: [:new, :create]
+
   def new
   end
 
@@ -15,4 +17,6 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_path
   end
+
+  
 end

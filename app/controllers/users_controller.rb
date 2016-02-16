@@ -1,5 +1,7 @@
-class UsersController < ApplicationController
-	
+class UsersController < ApplicationController	
+
+  before_action :require_login, only: [:index, :show]
+
 	def index
     if(session[:user_id])
   		@users = User.all
