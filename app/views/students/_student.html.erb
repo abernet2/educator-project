@@ -1,4 +1,4 @@
-<%= link_to "/users/#{student.teacher.id}/students/#{student.id}" do %>
+<%= link_to student_path(student) do %>
   <%= student.first_name %> <%= student.last_name %> 
 <% end %>
   <%= student.grade %> <br>
