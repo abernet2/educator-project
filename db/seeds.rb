@@ -8,11 +8,11 @@
 require 'faker'
 
 30.times do
-	User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, password: "test", photo_url: Faker::Avatar.image)
+	User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, password: "test")
 end
 
 100.times do
 	Student.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, grade: 1, gpa: 1.5, detentions: 1, gender: 'M', teacher_id: rand(1..30))
 end
 
-User.create!(first_name: "Tom", last_name: "McHenry", username: "tommchenry", password:"test", photo_url: Faker::Avatar.image)
+User.create!(first_name: "Tom", last_name: "McHenry", username: "tommchenry", password:"test")
