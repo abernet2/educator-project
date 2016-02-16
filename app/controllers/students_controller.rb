@@ -10,6 +10,8 @@ class StudentsController < ApplicationController
 
   def update
     @student = Student.find(params[:id])
-    @student.teacher_id = session[:user_id]
+    @student.update_attributes(teacher_id: session[:user_id])
+    @student.save
+    redirect_to student_path
   end
 end
