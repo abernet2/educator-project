@@ -1,19 +1,19 @@
-<div class="login-container">
+<div class="login form-container col-md-4">
 
   <h3>Login</h3>
 
   <%= render 'sessions/errors' if @errors %>
 
   <%= form_tag(sessions_path, method: 'post', id: 'login-form') do %>
-    <div class="login-username">
+    <div class="input-container username">
       <%= label_tag :username, nil, :class => 'session-label' %>
-      <%= text_field_tag :username %>
+      <%= text_field_tag :username, 'Username', :class => 'form-control' %>
     </div>
-    <div class="login-password">
+    <div class="input-container password">
       <%= label_tag :password, nil, :class => 'session-label' %>
-      <%= password_field_tag :password %>
+      <%= password_field_tag :password, nil, :class => 'form-control' %>
     </div>
-    <input type='submit' class='btn' value='Login'>
+    <input type='submit' class='btn btn-primary' value='Login'>
     <%= link_to "Need to register?", new_user_path %>
   <% end %>
 </div>

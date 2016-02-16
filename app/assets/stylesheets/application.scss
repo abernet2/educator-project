@@ -13,4 +13,7 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import 'main';
+ @import 'student';
+ @import 'user';
 body { padding-top: 100px; }

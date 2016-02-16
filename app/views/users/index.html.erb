@@ -1,8 +1,10 @@
-<dl class = "dl-horizontal">
-	<% @users.each do |user| %>
-		<dt><%= link_to(user) do %><img src="<%= user.photo_url %>" width="50"><% end %></dt>
-		<%= link_to(user) do %>
-		  <dd><strong><%= user.first_name %> <%= user.last_name %></strong></dd>
-		<% end %>
-	<% end %>
-</dl>
+<% @users.each do |user| %>
+  <div class="col-lg-2 col-md-3 col-xs-4 thumb">
+    <a class="thumbnail" href="<%= user_path(user)%>">
+      <img class="img-responsive" src="<%= user.photo_url %>" alt="">
+      <p><%= user.full_name %></p>
+    </a>
+  </div>
+<% end %>
+
+

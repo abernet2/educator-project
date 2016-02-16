@@ -1,4 +1,4 @@
-describe "the login page", :type => :feature do 
+describe "the login page", :type => :feature do
   before :each do
     user = build(:user)
     user.username = 'admin'
@@ -19,7 +19,8 @@ describe "the login page", :type => :feature do
   it "has a link to the registration page" do
     visit '/'
     click_link 'Need to register?'
-    expect(page).to have_content 'Register Here'
+    expect(page).to have_content 'Join the KISS Army
+'
   end
 
 end
