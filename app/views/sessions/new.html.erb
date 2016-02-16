@@ -1,5 +1,9 @@
 <div class="login-container">
+
   <h3>Login</h3>
+
+  <%= render 'sessions/errors' if @errors %>
+
   <%= form_tag(sessions_path, method: 'post', id: 'login-form') do %>
     <div class="login-username">
       <%= label_tag :username, nil, :class => 'session-label' %>
