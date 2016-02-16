@@ -37,6 +37,17 @@ header {
   h3 {
     text-align: center;
   }
+  .btn {
+    background-color: black;
+    border: none;
+    &:hover {
+      background-color: black + 70;
+    }
+  }
+  a {
+    color: black;
+    text-decoration: underline;
+  }
 
 
 }

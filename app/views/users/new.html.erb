@@ -1,6 +1,6 @@
 <div class='register form-container col-md-4'>
 
-  <h3>Register Here</h3>
+  <h3>Join the KISS Army</h3>
 
   <%= render 'sessions/errors' if @errors %>
 
@@ -25,7 +25,7 @@
       <%= label_tag :password_confirmation, nil, :class => 'session-label' %>
       <%= form.password_field :password_confirmation, :required => true, :class => 'form-control' %>
     </div>
-    <input type="submit" value='register' class='btn btn-primary'>
+    <input type="submit" value='Register' class='btn btn-primary'>
     <%= link_to "Already registered?", new_session_path %>
   <% end %>
 
