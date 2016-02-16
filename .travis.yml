@@ -1,9 +1,9 @@
 language: ruby
-services:
-  - postgresql
-default: &default
-  adapter: postgresql
-  encoding: unicode
-test:
-  <<: *default
-  database: educator-project_test
+# services:
+#   - postgresql
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+# test:
+#   <<: *default
+#   database: educator-project_test
