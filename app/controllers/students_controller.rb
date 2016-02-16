@@ -11,7 +11,12 @@ class StudentsController < ApplicationController
   def update
     @student = Student.find(params[:id])
     @student.update_attributes(teacher_id: session[:user_id])
-    @student.save
-    redirect_to student_path
+    @teacher = User.find(session[:user_id])      
+    respond_to do |format|
+      if @student.save
+        format.html { redirect_to student_path }
+        format.js {  }
+      end
+    end
   end
 end
