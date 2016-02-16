@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :users, except: [:edit, :update, :destroy]
   resources :students, only: [:index, :show, :update]
 
+  put 'users/:id/students/:id' => 'students#update_teacher', as: :update_teacher
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

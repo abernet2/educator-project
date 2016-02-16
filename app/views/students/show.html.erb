@@ -9,7 +9,7 @@
 <p> Favorite snack food: <%= @student.snack_food %> </p>
 <p> T-shirt size: <%= @student.shirt_size %> </p>
 
-<%= form_for @student, remote: true, :method => :put do |f| %>
+<%= form_for @student, url: update_teacher_path, remote: true, :method => :put do |f| %>
 	<%= f.submit "Add Student to Your Group", {class: 'btn-success'} %>
 <% end %>
 

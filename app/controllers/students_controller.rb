@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
-  def update
+  def update_teacher
     @student = Student.find(params[:id])
     @student.update_attributes(teacher_id: session[:user_id])
     @teacher = User.find(session[:user_id])
