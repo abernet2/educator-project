@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users, except: [:edit, :update, :destroy] do
-    resources :students
-  end
+  resources :users, except: [:edit, :update, :destroy]
+  resources :students, only: [:index, :show]
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'sessions#new'
-  get 'students/' => 'students#index'
+  # get 'students/' => 'students#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
