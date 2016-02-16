@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def require_loggout
+  def require_logout
     if logged_in?
       flash[:error] = "You must sign out before you can register or login"
       redirect_to @user 
