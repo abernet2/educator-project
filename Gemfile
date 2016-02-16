@@ -46,6 +46,9 @@ gem 'rails_12factor'
 # Use ransack for sorting columns
 gem 'ransack'
 
+# axlsx and acts_as_xlsx for export to CSV/XLS
+gem 'axlsx'
+gem 'acts_as_xlsx'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
