@@ -17,6 +17,10 @@
       <%= label_tag :last_name, nil, :class => 'session-label' %>
       <%= form.text_field :last_name, :class => 'form-control' %>
     </div>
+    <div class='register-input photo'>
+      <%= label_tag :photo, nil, :class => 'session-label' %>
+      <%= form.file_field :photo %>
+    </div>
     <div class='input-container password'>
       <%= label_tag :password, nil, :class => 'session-label' %>
       <%= form.password_field :password, :required => true, :class => 'form-control' %>
