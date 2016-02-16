@@ -7,3 +7,8 @@
 <h3> Other info: </h3>
 <p> Favorite snack food: <%= @student.snack_food %> </p>
 <p> T-shirt size: <%= @student.shirt_size %> </p>
+
+<%= form_for @student, :method => :put do |f| %>
+	<%= f.submit "Add Student to Your Group", {class: 'btn-success'} %>
+<% end %>
+
