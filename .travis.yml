@@ -1,4 +1,6 @@
 language: ruby
+before_script:
+  - cp config/database.yml.travis config/database.yml
 # services:
 #   - postgresql
 # default: &default
