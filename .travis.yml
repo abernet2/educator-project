@@ -1,1 +1,12 @@
 language: ruby
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database travis_ci_test;' -U postgres
+# services:
+#   - postgresql
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+# test:
+#   <<: *default
+#   database: educator-project_test
