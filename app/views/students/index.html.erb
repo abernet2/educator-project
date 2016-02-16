@@ -1,0 +1,44 @@
+<table class="table table-striped">
+  <tr>
+    <th>
+      First Name
+    </th>
+    <th>
+      Last Name
+    </th>
+    <th>
+      Grade
+    </th>
+    <th>
+      GPA
+    </th>
+    <th>
+      Detentions
+    </th>
+    <th>
+      Gender
+    </th>
+  </tr>
+  <% @students.each do |student| %>
+  <tr>
+    <td>
+      <%= link_to student.first_name, student %>
+    </td>
+    <td>
+      <%= link_to student.last_name, student %>
+    </td>
+    <td>
+      <%= student.grade %>
+    </td>
+    <td>
+      <%= student.gpa %>
+    </td>
+    <td>
+      <%= student.detentions %>
+    </td>
+    <td>
+      <%= student.gender %>
+    </td>
+  </tr>
+  <% end %>
+</table>
