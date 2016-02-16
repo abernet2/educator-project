@@ -7,12 +7,4 @@
   </div>
 <% end %>
 
-<dl class = "dl-horizontal">
-	<% @users.each do |user| %>
-		<dt><%= link_to(user) do %><img src="<%= user.photo_url %>" width="50"><% end %></dt>
-		<%= link_to(user) do %>
-		  <dd><strong><%= user.first_name %> <%= user.last_name %></strong></dd>
-		<% end %>
-	<% end %>
-</dl>
 

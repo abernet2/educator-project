@@ -24,13 +24,13 @@ header {
   }
 }
 
-.login-container {
+.form-container {
   float: none;
   margin: 0 auto;
   padding: .5em 2em 2em 2em;
   border-radius: 15px;
   background-color: silver;
-  .login {
+  .input-container {
     margin: 1em 0;
     input {
       font-family: $sans;}}
