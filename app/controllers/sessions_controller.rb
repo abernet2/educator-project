@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :require_loggout, only: [:new, :create]
+  before_action :require_logout, only: [:new, :create]
 
   def new
   end
