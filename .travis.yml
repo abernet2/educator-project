@@ -1,8 +1,6 @@
 language: ruby
 services:
   - postgresql
-before_script:
-  - psql -c 'create database educator-project_test;' -U postgres
 default: &default
   adapter: postgresql
   encoding: unicode
