@@ -1,0 +1,43 @@
+$rocker-font: 'New Rocker';
+$sans: "Helvetica";
+
+body {
+  font-family: $rocker-font;
+}
+
+header {
+  h1 {
+    display: inline-block;
+    a {
+      color: silver;
+      &:hover { color: silver + 50; }
+    }
+  }
+  .container {
+    position: relative;
+  }
+  nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -10px;
+  }
+}
+
+.login-container {
+  float: none;
+  margin: 0 auto;
+  padding: .5em 2em 2em 2em;
+  border-radius: 15px;
+  background-color: silver;
+  .login {
+    margin: 1em 0;
+    input {
+      font-family: $sans;}}
+  h3 {
+    text-align: center;
+  }
+
+
+}
+

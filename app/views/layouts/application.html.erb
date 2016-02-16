@@ -4,12 +4,13 @@
     <title>EducatorProject</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href='https://fonts.googleapis.com/css?family=New+Rocker' rel='stylesheet' type='text/css'>
     <%= csrf_meta_tags %>
   </head>
   <body>
       <header class="navbar navbar-fixed-top navbar-inverse">
         <div class="container">
-          <%= link_to "School Name", root_path, id: "logo" %>
+          <h1><%= link_to "Rock Rock Rock Rock Rock 'n Roll Code School", root_path, id: "logo" %></h1>
           <nav>
             <ul class="nav navbar-nav navbar-right">
               <% if current_user %>
