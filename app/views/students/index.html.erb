@@ -1,10 +1,7 @@
 <table class="table table-striped">
   <tr>
     <th>
-      First Name
-    </th>
-    <th>
-      Last Name
+      Name
     </th>
     <th>
       Grade
@@ -22,10 +19,9 @@
   <% @students.each do |student| %>
   <tr>
     <td>
-      <%= student.first_name %>
-    </td>
-    <td>
-      <%= student.last_name %>
+      <%= link_to(student) do %>
+      <%= student.first_name %> <%= student.last_name %>
+      <% end %>
     </td>
     <td>
       <%= student.grade %>
