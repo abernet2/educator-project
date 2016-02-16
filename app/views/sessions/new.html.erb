@@ -7,7 +7,7 @@
   <%= form_tag(sessions_path, method: 'post', id: 'login-form') do %>
     <div class="input-container username">
       <%= label_tag :username, nil, :class => 'session-label' %>
-      <%= text_field_tag :username, nil, placeholder: "Username", :class => 'form-control' %>
+      <%= text_field_tag :username, nil, :class => 'form-control' %>
     </div>
     <div class="input-container password">
       <%= label_tag :password, nil, :class => 'session-label' %>
