@@ -3,6 +3,9 @@ services:
   - postgresql
 before_script:
   - psql -c 'create database educator-project_test;' -U postgres
+default: &default
+  adapter: postgresql
+  encoding: unicode
 test:
   <<: *default
   database: educator-project_test
