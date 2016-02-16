@@ -19,6 +19,7 @@
 require 'simplecov'
 require 'rails_helper'
 require 'shoulda-matchers'
+require 'capybara/rspec'
 
 SimpleCov.start 'rails'
 RSpec.configure do |config|
