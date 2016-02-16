@@ -1,0 +1,33 @@
+<div class='register-form-container'>
+
+  <h3>Register Here</h3>
+
+  <%= render 'sessions/errors' if @errors %>
+
+  <%= form_for @user do |form| %>
+    <div class='register-input username'>
+      <%= label_tag :username, nil, :class => 'session-label' %>
+      <%= form.text_field :username, :required => true %>
+    </div>
+    <div class='register-input first_name'>
+      <%= label_tag :first_name, nil, :class => 'session-label' %>
+      <%= form.text_field :first_name %>
+    </div>
+    <div class='register-input last_name'>
+      <%= label_tag :last_name, nil, :class => 'session-label' %>
+      <%= form.text_field :last_name %>
+    </div>
+    <div class='register-input password'>
+      <%= label_tag :password, nil, :class => 'session-label' %>
+      <%= form.password_field :password, :required => true %>
+    </div>
+    <div class='register-input confirm-password'>
+      <%= label_tag :password_confirmation, nil, :class => 'session-label' %>
+      <%= form.password_field :password_confirmation, :required => true %>
+    </div>
+    <input type="submit" value='register'>
+    <%= link_to "Already registered?", new_session_path %>
+  <% end %>
+
+
+</div>
