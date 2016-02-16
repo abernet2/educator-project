@@ -1,22 +1,21 @@
-class UsersController < ApplicationController	
-
+class UsersController < ApplicationController
   before_action :require_login, only: [:index, :show]
 
-	def index
-    if(session[:user_id])
-  		@users = User.all
+  def index
+    if session[:user_id]
+      @users = User.all
     else
-      @error = "Unauthenticated user"
+      @error = 'Unauthenticated user'
       redirect_to new_session_path
     end
-	end
+  end
 
   def show
-    if(session[:user_id])
+    if session[:user_id]
       @user = User.find(params[:id])
       @students = @user.students
     else
-      @error = "Unauthenticated user"
+      @error = 'Unauthenticated user'
       redirect_to new_session_path
     end
   end
@@ -37,8 +36,8 @@ class UsersController < ApplicationController
   end
 
   private
-  def user_params
-    params.require(:user).permit(:username, :password, :first_name, :last_name, :password_confirmation)
-  end
 
+  def user_params
+    params.require(:user).permit(:username, :password, :first_name, :last_name, :photo, :password_confirmation)
+  end
 end
