@@ -48,6 +48,7 @@ gem 'ransack'
 
 # axlsx and acts_as_xlsx for export to CSV/XLS
 gem 'axlsx'
+gem 'axlsx_rails'
 gem 'acts_as_xlsx'
 
 group :development, :test do
