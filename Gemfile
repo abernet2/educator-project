@@ -43,6 +43,10 @@ gem 'aws-sdk-v1'
 # rails-12factor for Heroku
 gem 'rails_12factor'
 
+# Use ransack for sorting columns
+gem 'ransack'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

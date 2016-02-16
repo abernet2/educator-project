@@ -1,22 +1,22 @@
 <table class="table table-striped">
   <tr>
     <th>
-      Name
+      <%= sort_link(@search, :last_name ,'Name') %>
     </th>
     <th>
-      Grade
+      <%= sort_link(@search, :grade ,'Grade') %>
     </th>
     <th>
-      GPA
+      <%= sort_link(@search, :gpa ,'GPA') %>
     </th>
     <th>
-      Detentions
+      <%= sort_link(@search, :detentions ,'Detentions') %>
     </th>
     <th>
       Gender
     </th>
     <th>
-      Current Teacher
+      <%= sort_link(@search, 'teacher_last_name' , 'Current Teacher') %>
     </th>
   </tr>
   <% @students.each do |student| %>
