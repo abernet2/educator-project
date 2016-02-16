@@ -2,8 +2,7 @@ language: ruby
 services:
   - postgresql
 before_script:
-  - psql -c 'create database educator_project_test;' -U postgres
+  - psql -c 'create database educator-project_test;' -U postgres
 test:
-  adapter: postgresql
-  database: educator_project_test
-  username: postgres
+  <<: *default
+  database: educator-project_test
