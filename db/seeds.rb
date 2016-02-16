@@ -12,5 +12,5 @@ require 'faker'
 end
 
 30.times do
-	Student.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, grade: 1, gpa: 1.5, detentions: 1, gender: 'M')
+	Student.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, grade: 1, gpa: 1.5, detentions: 1, gender: 'M', teacher_id: rand(1..30))
 end
