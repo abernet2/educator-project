@@ -43,6 +43,7 @@ gem 'aws-sdk-v1'
 # rails-12factor for Heroku
 gem 'rails_12factor'
 
+gem 'faker'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -50,7 +51,6 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'simplecov'
 end
 
