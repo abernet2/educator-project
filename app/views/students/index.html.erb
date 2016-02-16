@@ -15,12 +15,15 @@
     <th>
       Gender
     </th>
+    <th>
+      Current Teacher
+    </th>
   </tr>
   <% @students.each do |student| %>
   <tr>
     <td>
       <%= link_to(student) do %>
-      <%= student.first_name %> <%= student.last_name %>
+        <%= student.first_name %> <%= student.last_name %>
       <% end %>
     </td>
     <td>
@@ -34,6 +37,11 @@
     </td>
     <td>
       <%= student.gender %>
+    </td>
+    <td>
+      <%= link_to(student.teacher) do %>
+        <%= student.teacher.full_name %>
+      <% end %>
     </td>
   </tr>
   <% end %>
