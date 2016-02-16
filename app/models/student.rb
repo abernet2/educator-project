@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-  belongs_to :user, foreign_key: :teacher_id
+  belongs_to :teacher, class_name: "User"
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :grade, presence: true
