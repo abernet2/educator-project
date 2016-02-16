@@ -3,6 +3,43 @@
   <h2><%= @user.full_name %></h2>
 </div>
 
-<div class="student-info">
-  <%= render @students %>
-</div>
+<table class="table table-striped">
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Grade
+    </th>
+    <th>
+      GPA
+    </th>
+    <th>
+      Detentions
+    </th>
+    <th>
+      Gender
+    </th>
+  </tr>
+  <% @students.each do |student| %>
+  <tr>
+    <td>
+      <%= link_to(student) do %>
+      <%= student.first_name %> <%= student.last_name %>
+      <% end %>
+    </td>
+    <td>
+      <%= student.grade %>
+    </td>
+    <td>
+      <%= student.gpa %>
+    </td>
+    <td>
+      <%= student.detentions %>
+    </td>
+    <td>
+      <%= student.gender %>
+    </td>
+  </tr>
+  <% end %>
+</table>

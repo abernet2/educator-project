@@ -1,3 +1,9 @@
-<%= @student.first_name %> <%= @student.last_name %> <%= @student.grade %> <%= @student.gpa %>
-<%= @student.gender %> <%= @student.teacher.full_name %> <%= @student.snack_food %> 
-<%= @student.shirt_size %>
+
+<h2> Listing Page for: <%= @student.first_name %> <%= @student.last_name %> </h2>
+<p> Grade: <%= @student.grade %> </p>
+<p> GPA: <%= @student.gpa %> </p>
+<p> Gender: <%= @student.gender %> </p>
+<p> Teacher: <%= @student.teacher.full_name %> </p>
+<h3> Other info: </h3>
+<p> Favorite snack food: <%= @student.snack_food %> </p>
+<p> T-shirt size: <%= @student.shirt_size %> </p>
