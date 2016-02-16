@@ -3,13 +3,11 @@ class StudentsController < ApplicationController
   def index
     @search = Student.search(params[:q])
     @students = @search.result
-    @students = Student.all
     respond_to do |format|
       format.html
       format.csv { send_data @students.to_csv }
       format.xlsx { send_data @students.to_xlsx.to_stream.read }
     end
-
   end
 
   def show
