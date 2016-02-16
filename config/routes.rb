@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :students, only: [:index, :show, :update]
 
   put 'users/:id/students/:id' => 'students#update_teacher', as: :update_teacher
+  patch 'students/:id/update_grade' => 'students#update_grade', as: :update_grade
+  patch 'students/:id/update_gpa' => 'students#update_gpa', as: :update_gpa
+  patch 'students/:id/update_detentions' => 'students#update_detentions', as: :update_detentions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
