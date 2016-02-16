@@ -12,13 +12,15 @@
           <%= link_to "School Name", '#', id: "logo" %>
           <nav>
             <ul class="nav navbar-nav navbar-right">
+              <% if current_user %>
               <li><%= link_to "Students",   '/students/' %></li>
               <li><%= link_to "Teachers",   '/users/' %></li>
-              <% if current_user %>
-              <li><%= link_to "Log in", '#' %></li>
-              <% else %>
               <li><%= link_to "Your Account", '#' %></li>
-              <li><%= link_to "Log out", '#' %></li>
+              <li><%= link_to "Log out", session_path(current_user.id), :method => 'delete' %></li>
+
+              <% else %>
+              <li><%= link_to "Log in", '#' %></li>
+
               <% end %>
             </ul>
           </nav>

@@ -1,4 +1,4 @@
-class SessionsController < ActionController::Base
+class SessionsController < ApplicationController
   def new
   end
 
@@ -9,5 +9,10 @@ class SessionsController < ActionController::Base
       redirect_to user_path(user)
     else
     end
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path
   end
 end
