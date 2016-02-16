@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
 	
 	def index
-		@users = User.all
+    if(session[:user_id])
+  		@users = User.all
+    else
+      @error = "Unauthenticated user"
+      redirect_to new_session_path
+    end
 	end
 
   def show
