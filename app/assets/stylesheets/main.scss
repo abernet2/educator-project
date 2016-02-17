@@ -9,8 +9,7 @@ header {
   h1 {
     display: inline-block;
     a {
-      color: silver;
-      &:hover { color: silver + 50; }
+      color: #ff0091;
     }
   }
   .container {
@@ -49,6 +48,24 @@ header {
     text-decoration: underline;
   }
 
-
 }
 
+.navbar-static-top {
+    min-height: 90px;
+    background-color: greenyellow;
+}
+
+.navbar-static-top .container {
+    min-height: 90px;
+}
+
+.container.main-content {
+  background-color: #00eff6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent !important;
+}

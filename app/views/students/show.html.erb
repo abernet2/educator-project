@@ -1,15 +1,46 @@
 
 <h2> Listing Page for: <%= @student.first_name %> <%= @student.last_name %> </h2>
-<p> Grade: <%= @student.grade %> </p>
-<p> GPA: <%= @student.gpa %> </p>
-<p> Detentions: <%= @student.detentions %> </p>
+
+<div class="student-info">
+  <p id="grade"> Grade: <%= @student.grade %> </p>
+  <%= form_for @student, url: update_grade_path, remote: true, method: :patch do |f| %>
+    <%= f.hidden_field :grade, value: "1" %>
+    <%= f.submit "+", class: 'grade inc-btn btn-increase' %>
+  <% end %>
+  <%= form_for @student, url: update_grade_path, remote: true, method: :patch do |f| %>
+    <%= f.hidden_field :grade, value: "-1" %>
+    <%= f.submit "-", class: 'grade inc-btn btn-decrease' %>
+  <% end %>
+  <br>
+  <p id="gpa"> GPA: <%= @student.gpa %> </p>
+  <%= form_for @student, url: update_gpa_path, remote: true, method: :patch do |f| %>
+    <%= f.hidden_field :gpa, value: "0.1" %>
+    <%= f.submit "+", class: 'gpa inc-btn btn-increase' %>
+  <% end %>
+  <%= form_for @student, url: update_gpa_path, remote: true, method: :patch do |f| %>
+    <%= f.hidden_field :gpa, value: "-0.1" %>
+    <%= f.submit "-", class: 'gpa inc-btn btn-decrease' %>
+  <% end %>
+  <br>
+  <p id="detentions"> Detentions: <%= @student.detentions %> </p>
+  <%= form_for @student, url: update_detentions_path, remote: true, method: :patch do |f| %>
+    <%= f.hidden_field :detentions, value: "1"  %>
+    <%= f.submit "+", class: 'detentions inc-btn btn-increase' %>
+  <% end %>
+  <%= form_for @student, url: update_detentions_path, remote: true, method: :patch do |f| %>
+    <%= f.hidden_field :detentions, value: "-1" %>
+    <%= f.submit "-", class: 'detentions inc-btn btn-decrease' %>
+  <% end %>
+</div>
+
+
 <p> Gender: <%= @student.gender %> </p>
 <p id="teacher"> Teacher: <%= @student.teacher.full_name %> </p>
 <h3> Other info: </h3>
 <p> Favorite snack food: <%= @student.snack_food %> </p>
 <p> T-shirt size: <%= @student.shirt_size %> </p>
 
-<%= form_for @student, remote: true, :method => :put do |f| %>
+<%= form_for @student, url: update_teacher_path, remote: true, :method => :put do |f| %>
 	<%= f.submit "Add Student to Your Group", {class: 'btn-success'} %>
 <% end %>
 

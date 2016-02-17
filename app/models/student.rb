@@ -1,6 +1,6 @@
 class Student < ActiveRecord::Base
   acts_as_xlsx
-  
+
   belongs_to :teacher, class_name: "User"
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -16,6 +16,10 @@ class Student < ActiveRecord::Base
         csv << student.attributes.values_at(*column_names)
       end
     end
+  end
+
+  def full_name
+    "#{self.first_name} #{self.last_name}"
   end
 
 end
