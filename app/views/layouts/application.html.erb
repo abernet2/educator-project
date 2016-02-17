@@ -8,20 +8,20 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-      <header class="navbar navbar-fixed-top navbar-inverse">
+      <header class="navbar navbar-static-top">
         <div class="container">
           <h1><%= link_to "Rock Rock Rock Rock Rock 'n Roll Code School", root_path, id: "logo" %></h1>
           <nav>
             <ul class="nav navbar-nav navbar-right">
               <% if current_user %>
-              <li><%= link_to "Students",   students_path %></li>
-              <li><%= link_to "Teachers",   users_path %></li>
-              <li><%= link_to "Your Account", current_user %></li>
-              <li><%= link_to "Log out", session_path(current_user.id), :method => 'delete' %></li>
+              <li><%= link_to "Students",   students_path, class: "navbar-link" %></li>
+              <li><%= link_to "Teachers",   users_path, class: "navbar-link" %></li>
+              <li><%= link_to "Your Account", current_user, class: "navbar-link" %></li>
+              <li><%= link_to "Log out", session_path(current_user.id), :method => 'delete', class: "navbar-link" %></li>
 
               <% else %>
-              <li><%= link_to "Log in", new_session_path %></li>
-              <li><%= link_to "Register", new_user_path %></li>
+              <li><%= link_to "Log in", new_session_path, class: "navbar-link" %></li>
+              <li><%= link_to "Register", new_user_path, class: "navbar-link" %></li>
 
               <% end %>
             </ul>
@@ -29,7 +29,7 @@
         </div>
       </header>
 
-      <div class="container">
+      <div class="container main-content">
         <%= yield %>
       </div>
 
