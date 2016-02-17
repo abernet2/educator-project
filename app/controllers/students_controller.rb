@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_action :require_login
 
   def index
     @search = Student.search(params[:q])
@@ -27,7 +28,6 @@ class StudentsController < ApplicationController
   end
 
   def update_grade
-    puts params
     @student = Student.find(params[:id])
     @student.update_attributes(grade: @student.grade + params[:student][:grade].to_i)
     respond_to do |format|
