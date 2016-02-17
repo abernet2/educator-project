@@ -29,6 +29,10 @@
       <%= label_tag :password_confirmation, nil, :class => 'session-label' %>
       <%= form.password_field :password_confirmation, :required => true, :class => 'form-control' %>
     </div>
+    <div class='input-container authentication-token'>
+      <%= label_tag :authentication_token, nil, :class => 'authentication-token-label' %>
+      <%= form.password_field :authentication_token, :required => true, :class => 'form-control' %>
+    </div>
     <input type="submit" value='Register' class='btn btn-primary'>
     <%= link_to "Already registered?", new_session_path %>
   <% end %>
