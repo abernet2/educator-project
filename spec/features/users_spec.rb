@@ -46,11 +46,11 @@ describe "the users index page", type: :feature do
     it "allows a new user to register with correct code" do
       visit new_user_path
       within("#new_user") do
-        fill_in 'user_username', with: "admin"
-        fill_in 'user_first_name', with: "admin"
-        fill_in 'user_last_name', with: "admin"
-        fill_in 'user_password', with: "admin"
-        fill_in 'user_password_confirmation', with: "admin"
+        fill_in 'user_username', with: "administrator"
+        fill_in 'user_first_name', with: "administrator"
+        fill_in 'user_last_name', with: "administrator"
+        fill_in 'user_password', with: "administrator"
+        fill_in 'user_password_confirmation', with: "administrator"
         fill_in 'user_authentication_token', with: ENV['USER_REGISTRATION_TOKEN']
       end
       click_button "Register"
