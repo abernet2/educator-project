@@ -15,9 +15,9 @@ class StudentsController < ApplicationController
   end
 
   def update_detentions
-    puts params
     @student = Student.find(params[:id])
-    @student.update_attributes(detentions: params[:student][:detentions])
+    detentions = [0, @student.detentions + params[:student][:detentions].to_i].max
+    @student.update_attributes(detentions: detentions)
     respond_to do |format|
       if @student.save
         format.html { redirect_to student_path }
@@ -29,7 +29,7 @@ class StudentsController < ApplicationController
   def update_grade
     puts params
     @student = Student.find(params[:id])
-    @student.update_attributes(grade: params[:student][:grade])
+    @student.update_attributes(grade: @student.grade + params[:student][:grade].to_i)
     respond_to do |format|
       if @student.save
         format.html { redirect_to student_path }
@@ -39,9 +39,8 @@ class StudentsController < ApplicationController
   end
 
   def update_gpa
-    puts params
     @student = Student.find(params[:id])
-    @student.update_attributes(gpa: params[:student][:gpa])
+    @student.update_attributes(gpa: @student.gpa + params[:student][:gpa].to_f)
     respond_to do |format|
       if @student.save
         format.html { redirect_to student_path }
