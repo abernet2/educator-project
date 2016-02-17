@@ -5,31 +5,31 @@
   <p id="grade"> Grade: <%= @student.grade %> </p>
   <%= form_for @student, url: update_grade_path, remote: true, method: :patch do |f| %>
     <%= f.hidden_field :grade, value: "1" %>
-    <%= f.submit "+", class: 'inc-btn btn-increase' %>
+    <%= f.submit "+", class: 'grade inc-btn btn-increase' %>
   <% end %>
   <%= form_for @student, url: update_grade_path, remote: true, method: :patch do |f| %>
     <%= f.hidden_field :grade, value: "-1" %>
-    <%= f.submit "-", class: 'inc-btn btn-decrease' %>
+    <%= f.submit "-", class: 'grade inc-btn btn-decrease' %>
   <% end %>
   <br>
   <p id="gpa"> GPA: <%= @student.gpa %> </p>
   <%= form_for @student, url: update_gpa_path, remote: true, method: :patch do |f| %>
     <%= f.hidden_field :gpa, value: "0.1" %>
-    <%= f.submit "+", class: 'inc-btn btn-increase' %>
+    <%= f.submit "+", class: 'gpa inc-btn btn-increase' %>
   <% end %>
   <%= form_for @student, url: update_gpa_path, remote: true, method: :patch do |f| %>
     <%= f.hidden_field :gpa, value: "-0.1" %>
-    <%= f.submit "-", class: 'inc-btn btn-decrease' %>
+    <%= f.submit "-", class: 'gpa inc-btn btn-decrease' %>
   <% end %>
   <br>
   <p id="detentions"> Detentions: <%= @student.detentions %> </p>
   <%= form_for @student, url: update_detentions_path, remote: true, method: :patch do |f| %>
     <%= f.hidden_field :detentions, value: "1"  %>
-    <%= f.submit "+", class: 'inc-btn btn-increase' %>
+    <%= f.submit "+", class: 'detentions inc-btn btn-increase' %>
   <% end %>
   <%= form_for @student, url: update_detentions_path, remote: true, method: :patch do |f| %>
     <%= f.hidden_field :detentions, value: "-1" %>
-    <%= f.submit "-", class: 'inc-btn btn-decrease' %>
+    <%= f.submit "-", class: 'detentions inc-btn btn-decrease' %>
   <% end %>
 </div>
 

@@ -1,5 +1,7 @@
 FactoryGirl.define do
-  factory :student do 
+  factory :student do
+    association :teacher, factory: :user
+
     first_name "John"
     last_name "Doe"
     grade 1
@@ -8,6 +10,5 @@ FactoryGirl.define do
     gender "M"
     snack_food "kale chips"
     shirt_size "L"
-    teacher_id 1
   end
 end
