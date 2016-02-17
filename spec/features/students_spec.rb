@@ -3,6 +3,8 @@ describe "the students index page", type: :feature do
     user = build(:user)
     user.username = 'admin'
     user.password = 'password'
+    user.first_name = "John"
+    user.last_name = "Doe"
     user.save
     visit '/'
     within("#login-form") do
