@@ -6,3 +6,11 @@ td a {
   color: black;
   text-decoration: underline;
 }
+
+.sort-desc::after {
+	content: '\25BC';
+}
+
+.sort-asc::after {
+	content: '\25B2';
+}

@@ -47,6 +47,9 @@ gem 'faker'
 # Use ransack for sorting columns
 gem 'ransack'
 
+# Add Underscore for additional JS functionality
+gem 'underscore-rails'
+
 # axlsx and acts_as_xlsx for export to CSV/XLS
 gem 'axlsx'
 gem 'axlsx_rails'
