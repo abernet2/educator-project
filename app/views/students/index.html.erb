@@ -1,21 +1,21 @@
 <table class="table table-striped" id="student-table">
   <tr>
-    <th id="student-last-name">
+    <th id="student-last-name" class="name-sort">
       <%= sort_link(@search, :last_name ,'Name') %>
     </th>
-    <th id="student-grade">
+    <th id="student-grade" class="number-sort">
       <%= sort_link(@search, :grade ,'Grade') %>
     </th>
-    <th id="student-gpa">
+    <th id="student-gpa" class="number-sort">
       <%= sort_link(@search, :gpa ,'GPA') %>
     </th>
-    <th id="student-detentions">
+    <th id="student-detentions" class="number-sort">
       <%= sort_link(@search, :detentions ,'Detentions') %>
     </th>
     <th id="student-gender">
       Gender
     </th>
-    <th id="student-teacher">
+    <th id="teacher-last-name" class="name-sort">
       <%= sort_link(@search, 'teacher_last_name' , 'Current Teacher') %>
     </th>
   </tr>
@@ -40,7 +40,7 @@
     </td>
     <td class="student-teacher">
       <%= link_to(student.teacher) do %>
-        <%= student.teacher.full_name %>
+        <%= student.teacher.first_name %> <span class="teacher-last-name"><%= student.teacher.last_name %></span> 
       <% end %>
     </td>
   </tr>
