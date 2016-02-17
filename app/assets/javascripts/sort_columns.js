@@ -51,11 +51,7 @@ $(document).ready(function(){
 		sorted = students.sort(function(a,b) {
 			var c = $('#' + a.getAttribute('id') + ' .' + sortColumn).text(),
 				d = $('#' + b.getAttribute('id') + ' .' + sortColumn).text();
-			if(c > d) { 
-				return -1;
-			} else {
-				return 1;
-			}
+			return sort(d,c);
 		});
 		return sorted
 	}
@@ -64,14 +60,17 @@ $(document).ready(function(){
 		sorted = students.sort(function(a,b) {
 			var c = $('#' + a.getAttribute('id') + ' .' + sortColumn).text(),
 				d = $('#' + b.getAttribute('id') + ' .' + sortColumn).text();
-			if(c < d) { 
-				return -1;
-			} else {
-				return 1;
-			}
-
+			return sort(c,d);
 		});
 		return sorted
 	}
+
+	function sort(item1, item2){
+			if (parseInt(item1) && parseInt(item2)){ 
+				item1 = +item1;
+				item2 = +item2;
+			};
+		return item1 < item2 ? -1 : 1;
+	};
 
 });
