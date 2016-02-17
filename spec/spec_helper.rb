@@ -109,4 +109,5 @@ def login
     fill_in 'password', with: admin.password
   end
   click_button 'Login'
+  admin
 end

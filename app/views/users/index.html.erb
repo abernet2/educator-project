@@ -1,8 +1,11 @@
-<% @users.each do |user| %>
-  <div class="col-lg-2 col-md-3 col-xs-4 thumb">
-    <a class="thumbnail" href="<%= user_path(user)%>">
-      <img class="img-responsive" src="<%= user.photo %>" alt="">
-      <p><%= user.full_name %></p>
-    </a>
-  </div>
-<% end %>
+<div class="teacher-list">
+  <h2>Teachers List</h2>
+  <% @users.each do |user| %>
+    <div class="col-lg-2 col-md-3 col-xs-4 thumb">
+      <a class="thumbnail" href="<%= user_path(user)%>">
+        <img class="img-responsive" src="<%= user.photo %>" alt="">
+        <p><%= user.full_name %></p>
+      </a>
+    </div>
+  <% end %>
+</div>
