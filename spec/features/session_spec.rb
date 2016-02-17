@@ -29,5 +29,14 @@ describe "the login page", :type => :feature do
     expect(page.current_path).to eq user_path(admin)
   end
 
+  it "will not accept an invalid username/password combo" do
+    visit '/'
+      within("#login-form") do
+    fill_in 'username', with: "admin.username"
+    fill_in 'password', with: "admin.password"
+  end
+  click_button 'Login'
+  end
+
 
 end
