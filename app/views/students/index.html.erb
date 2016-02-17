@@ -1,46 +1,46 @@
-<table class="table table-striped">
+<table class="table table-striped" id="student-table">
   <tr>
-    <th>
+    <th id="student-last-name" class="name-sort">
       <%= sort_link(@search, :last_name ,'Name') %>
     </th>
-    <th>
+    <th id="student-grade" class="number-sort">
       <%= sort_link(@search, :grade ,'Grade') %>
     </th>
-    <th>
+    <th id="student-gpa" class="number-sort">
       <%= sort_link(@search, :gpa ,'GPA') %>
     </th>
-    <th>
+    <th id="student-detentions" class="number-sort">
       <%= sort_link(@search, :detentions ,'Detentions') %>
     </th>
-    <th>
+    <th id="student-gender">
       Gender
     </th>
-    <th>
+    <th id="teacher-last-name" class="name-sort">
       <%= sort_link(@search, 'teacher_last_name' , 'Current Teacher') %>
     </th>
   </tr>
   <% @students.each do |student| %>
-  <tr>
-    <td>
+  <tr class="student-row" id="<%= student.id %>">
+    <td class="student-name">
       <%= link_to(student) do %>
-        <%= student.first_name %> <%= student.last_name %>
+        <%= student.first_name %> <span class="student-last-name"><%= student.last_name %></span>
       <% end %>
     </td>
-    <td>
+    <td class="student-grade">
       <%= student.grade %>
     </td>
-    <td>
+    <td class="student-gpa">
       <%= student.gpa %>
     </td>
-    <td>
+    <td class="student-detentions">
       <%= student.detentions %>
     </td>
-    <td>
+    <td class="student-gender">
       <%= student.gender %>
     </td>
-    <td>
+    <td class="student-teacher">
       <%= link_to(student.teacher) do %>
-        <%= student.teacher.full_name %>
+        <%= student.teacher.first_name %> <span class="teacher-last-name"><%= student.teacher.last_name %></span> 
       <% end %>
     </td>
   </tr>

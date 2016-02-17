@@ -7,6 +7,14 @@ td a {
   text-decoration: underline;
 }
 
+.sort-desc::after {
+	content: '\25BC';
+}
+
+.sort-asc::after {
+	content: '\25B2';
+}
+
 .inc-btn {
   display: inline-block;
 }
