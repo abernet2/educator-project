@@ -35,7 +35,7 @@
 
 
 <p> Gender: <%= @student.gender %> </p>
-<p id="teacher"> Teacher: <%= @student.teacher.full_name %> </p>
+<p id="teacher"> Teacher: <%= link_to @student.teacher.full_name, @student.teacher %> </p>
 <h3> Other info: </h3>
 <p> Favorite snack food: <%= @student.snack_food %> </p>
 <p> T-shirt size: <%= @student.shirt_size %> </p>
