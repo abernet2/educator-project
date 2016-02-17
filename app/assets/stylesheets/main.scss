@@ -49,6 +49,12 @@ header {
     text-decoration: underline;
   }
 
-
 }
 
+.navbar-static-top {
+    min-height: 90px;
+}
+
+.navbar-static-top .container {
+    min-height: 90px;
+}
