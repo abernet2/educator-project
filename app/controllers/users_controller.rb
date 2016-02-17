@@ -3,9 +3,6 @@ class UsersController < ApplicationController
   include ApplicationHelper
 
   def index
-    # @search = current_user.students.search(params[:q])
-    # @search = Student.search(params[:q])
-    # @students = @search.result
     if session[:user_id]
       @users = User.all
     else
@@ -25,6 +22,7 @@ class UsersController < ApplicationController
       @error = 'Unauthenticated user'
       redirect_to new_session_path
     end
+
   end
 
   def new

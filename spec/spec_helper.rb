@@ -17,11 +17,12 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'simplecov'
+SimpleCov.start 'rails'
 require 'rails_helper'
 require 'shoulda-matchers'
 require 'capybara/rspec'
 
-SimpleCov.start 'rails'
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -109,4 +110,5 @@ def login
     fill_in 'password', with: admin.password
   end
   click_button 'Login'
+  admin
 end
