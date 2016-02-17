@@ -8,7 +8,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-      <header class="navbar navbar-static-top">
+      <header class="navbar navbar-static-top box-shadow--2dp">
         <div class="container">
           <h1><%= link_to "Rock Rock Rock Rock Rock 'n Roll Code School", root_path, id: "logo" %></h1>
           <nav>
@@ -29,7 +29,7 @@
         </div>
       </header>
 
-      <div class="container main-content">
+      <div class="container main-content box-shadow--6dp">
         <%= yield %>
       </div>
 
