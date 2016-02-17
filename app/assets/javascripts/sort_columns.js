@@ -6,9 +6,14 @@ $(document).ready(function(){
 		var columnHead = $(this).find('.sort_link');
 		var sortColumn = $(this).attr('id');
 		if (columnHead.hasClass('sort-desc') == false){
-			student_desc(students, sortColumn, columnHead);
+			kill_sort_classes();
+			students = sort_desc(students, sortColumn);
+			students.detach().appendTo('.table');
+			add_desc(columnHead);
 		} else {
-			student_asc(students, sortColumn, columnHead);
+			kill_sort_classes();
+			students = sort_asc(students, sortColumn);
+			add_asc(columnHead);
 		}
 	});
 
@@ -17,32 +22,27 @@ $(document).ready(function(){
 		var columnHead = $(this).find('.sort_link');
 		var sortColumn = $(this).attr('id');
 		if (columnHead.hasClass('sort-desc') == false){
-			$('.sort-desc').removeClass('sort-desc');
-			$('.sort-asc').removeClass('sort-asc');
+			kill_sort_classes();
 			students = sort_asc(students, sortColumn);
-			students.detach().appendTo('.table');
-			columnHead.addClass("sort-desc");
+			add_desc(columnHead);
 		} else {
-			$('.sort-desc').removeClass('sort-desc');
-			$('.sort-asc').removeClass('sort-asc');
+			kill_sort_classes();
 			students = sort_desc(students, sortColumn);
-			students.detach().appendTo('.table');
-			columnHead.addClass("sort-asc");
+			add_asc(columnHead);
 		}
 	});
 
-	function student_desc(students, sortColumn, columnHead){
+	function kill_sort_classes(){
 		$('.sort-desc').removeClass('sort-desc');
 		$('.sort-asc').removeClass('sort-asc');
-		students = sort_desc(students, sortColumn);
+	}
+
+	function add_desc(columnHead){
 		students.detach().appendTo('.table');
 		columnHead.addClass("sort-desc");
 	}
 
-	function student_asc(students, sortColumn, columnHead){
-		$('.sort-desc').removeClass('sort-desc');
-		$('.sort-asc').removeClass('sort-asc');
-		students = sort_asc(students, sortColumn);
+	function add_asc(columnHead){
 		students.detach().appendTo('.table');
 		columnHead.addClass("sort-asc");
 	}
